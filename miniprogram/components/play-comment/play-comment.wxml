@@ -1,0 +1,28 @@
+<!--components/play-comment/play-comment.wxml-->
+<view class="play-comment">
+  <!-- 标题 评论 -->
+  <view class="total">{{comment.total}} 条评论</view>
+
+  <view class="lists" wx:for="{{comment.list}}" wx:key="index">
+    <!-- 头像 -->
+    <image mode="widthFix" src="{{item.userinfo.avatar}}"></image>
+    <!--  binderror="errImg" -->
+    <!-- <image src="../../assect/default_avatar.png"></image> -->
+    <!-- 主要信息  左右分-->
+    <view class="info">
+      <view class="top">
+        <view class="user">
+          <view class="username">{{item.userinfo.username}}</view>
+          <!-- <view class="time">{{item.addtime}}</view> -->
+          <view class="time">{{item.addtime}}</view>
+        </view>
+        <view class="approve">👍 {{item.count_approve}}</view>
+      </view>
+      <view class="bottom">{{item.content}}</view>
+    </view>
+  </view>
+  <!-- 结束 -->
+  <view class="end">
+    -End-
+  </view>
+</view>

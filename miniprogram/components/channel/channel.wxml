@@ -1,0 +1,8 @@
+<!--components/channel/channel.wxml-->
+<!-- <text>components/channel/channel.wxml</text> -->
+<view class="channels">
+  <view wx:for="{{lists}}" wx:key="index" class="channel"  data-id="{{item.cateid || item.tab}}" bindtap="navigateToDetail">
+    <view class="catename">#{{item.catename}}#</view>
+    <image mode="widthFix" src="{{item.icon}}" ></image>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+/* components/search-history/search-history.wxss */
+
+.search-history {
+  padding-top: 40px;
+}
+
+.search-history .title {
+  font-size: 18px;
+  padding: 40px 0 20px 15px;
+  color: #888;
+}
+
+.search-history .keyword {
+  padding: 0 15px;
+}
+
+.search-history .keyword .kw {
+  display: inline-block;
+  color: #ffffff;
+  padding: 10px 10px;
+  margin: 10px 15px 5px 0;
+  background-color: #252525;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+.search-history .keyword .kw:active {
+  background-color: #505053;
+  color: #666;
+}
+
+.search-history .history .title .clear {
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-right: 40px;
+}
+
+.search-history .history .title .clear .icon{
+  width: 1em;
+  height: 1em;
+}

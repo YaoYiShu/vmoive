@@ -1,0 +1,36 @@
+<!--components/play-relate-video/play-relate-video.wxml-->
+<wxs src="../../utils/tools.wxs" module="tools" />
+
+<view class="scroll-bigbox">
+  <view class="scroll-box" wx:for="{{relateVideos.length}}" wx:key="*this"> 
+  <view class="tag">
+    <view class="name">{{relateVideos[index].name}} </view>
+    <view class="more">more</view>
+  </view>
+  <scroll-view class="scroll-view_H" scroll-x="true" >
+    <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{relateVideos[index].list}}" wx:key="index">
+      <!-- item.postid ||  -->
+      <image mode="widthFix" style="{{!finishLoadFlag ? 'display: inline-block' : 'display: none'}} "  src="https://fakeimg.pl/114x70/?text=movie"></image>
+      
+      <image
+      wx:if="{{item.image}}"  src="{{item.image}}" 
+      bindload="imageOnLoad"
+      data-id="{{item.postid}}" bindtap="navigateToPlay">
+        <view class="title">
+          <view class="duration">{{tools.parseDuration(item.duration)}}</view> 
+          {{item.title}}
+        </view>
+      </image>
+     
+    </view>
+  </scroll-view>
+ </view>
+</view>
+
+
+ <!-- 记录 -->
+ <!-- <view id="demo1" class="scroll-view-item_H demo-text-1">1</view>
+    <view id="demo2" class="scroll-view-item_H demo-text-2">2</view>
+    <view id="demo3" class="scroll-view-item_H demo-text-3">3</view>
+    <view id="demo4" class="scroll-view-item_H demo-text-3">4</view>
+    <view id="demo5" class="scroll-view-item_H demo-text-3">5</view> -->

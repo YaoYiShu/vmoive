@@ -1,0 +1,137 @@
+/* pages/home/home.wxss */
+.home {
+  width: 100%;
+  height: 100%;
+  /* background-color: #010101; */
+}
+.home .van-tabs {
+  padding-top: 0;
+}
+
+.home .van-nav-bar {
+  background-color: #010101;
+  color: #c7c7c7;
+}
+
+.home .van-nav-bar .van-tabs {
+  position: static;
+  color: #c7c7c7;
+}
+.home .van-nav-bar .van-tabs .van-tabs__content {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 100%;
+  text-align: left;
+}
+.home .van-nav-bar .van-tabs .van-tabs__line {
+  background-color:#f0f0f0;
+}
+.home .van-ellipsis{
+  background-color: #010101;
+}
+.home .van-nav-bar .van-icon {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 16px;
+}
+
+.home .van-popup .thumb {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 0 15px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  overflow: hidden;
+}
+.home .van-popup .thumb .mark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(20px) brightness(0.8);
+  transform: scale(1.2);
+  background-position: 50%;
+  background-size: cover;
+  z-index: -1;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.home .van-popup .thumb .box {
+  margin-top: 50px;
+  width: 100%;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.home .van-popup .thumb .box image {
+  position: relative;
+  /* filter: brightness(0.8); */
+  height: 100%;
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+}
+
+.home .van-popup .thumb .box image .time {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  left: 15px;
+  bottom: 20px;
+  width: 100%;
+  color: #fff;
+}
+
+.home .van-popup .thumb .box image .time .day {
+  font-size: 24px;
+}
+.home .van-popup .thumb .box image .time .day::after {
+  content: '';
+  width: 0.2em;
+  height: 0.8em;
+  display: inline-block;
+  border-right: 1px solid #fff;
+}
+
+.home .van-popup .thumb .box image .time .other {
+  font-size: 12px;
+  transform: scale(0.75);
+}
+
+.home .van-popup .thumb .content {
+  /* height: 35%; */
+  /* height: 100%; */
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+  align-items: center;
+}
+.home .van-popup .thumb .content .title {
+  font-size: 12px;
+  line-height: 30px;
+  transform: scale(0.8);
+}
+.home .van-popup .thumb .content .desc {
+  display: inline-block;
+  font-size: 12px;
+  width: 120%;
+  transform: scale(0.65);
+  color: #000;
+}
+
+.home .van-hairline--bottom:after, .van-hairline--left:after, .van-hairline--right:after, .van-hairline--surround:after, .van-hairline--top-bottom:after, .van-hairline--top:after, .van-hairline:after {
+  border: 0 solid transparent;
+}
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "video-list":"/components/video-list/video-list",
+    "series":"/components/series/series"
+  }
+}

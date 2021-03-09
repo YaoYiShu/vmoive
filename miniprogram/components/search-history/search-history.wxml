@@ -1,0 +1,23 @@
+<!--components/search-history/search-history.wxml-->
+
+<view class="search-history"> 
+  <view class="hot">
+    <view class="title">热门搜索</view>
+    <view class="keyword">
+      <text class="kw" wx:for="{{search.recommend_keywords}}" data-kw="{{item.kw}}" wx:key="*this"
+        bindtap="handleSearch">{{item.kw}}</text>
+    </view>
+  </view>
+
+  <view class="history">
+    <view class="title">
+      搜索历史
+      <view class="clear" wx:if="{{reverseHistory.length}}" bindtap="clearhandle">清除<image class="icon" src="../../assect/search_clear_icon.png"></image></view>
+    </view>
+    <view class="keyword">
+      <text class="kw" wx:for="{{reverseHistory}}" data-kw="{{item.message}}" wx:key="index" bindtap="handleSearch">{{item.message}}</text>
+    </view>
+  </view>
+</view>
+<van-dialog id="van-dialog" />
+

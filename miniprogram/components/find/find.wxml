@@ -1,0 +1,33 @@
+<!--components/find/find.wxml-->
+<!-- <text>components/find/find.wxml</text> -->
+<view class="find">
+  <swiper style="height: {{bannerH}}px;" indicator-dots="{{indicatorDots}}" indicator-color="{{rgba(255,255,255,1)}}"
+    indicator-active-color="#ffffff" circular="{{true}}" autoplay="{{true}}" duration="{{duration}}">
+    <block wx:for="{{index.banner.list}}" wx:key="*this">
+      <!-- 轮播图 -->
+      <swiper-item>
+        <!-- <view class="swiper-item {{item}}">{{item.image}}</view> -->
+        <image mode="{{widthFix}}" src="{{item.image}}" data-id="{{item.extra_data.app_banner_param}}" bindtap="navigateToPlay"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- <view class="content">
+    <view class="title">{{index.today.selection_title}}</view>
+    <view class="list" wx:for="{{index.today.list}}" wx:key="*this">
+      <image mode="{{widthFix}}" data-id="{{item.postid}}" src="{{item.image}}" bindtap="toPlay"></image>
+      <view class="desc">
+          <view class="cate">{{item.cates[0].catename}} / {{item.duration}}</view>
+          <view class="wx-title">{{item.title}}</view>
+        </view>
+    </view>
+  </view> -->
+
+  <!-- 下列今日推荐 -->
+  <video-list lists="{{index.today}}"></video-list>
+  <video-list lists="{{index.hot}}"></video-list>
+  <video-list lists="{{index.album}}"></video-list>
+  <video-list lists="{{index.posts}}"></video-list>
+  <video-list wx:for="{{historyPosts}}" lists="{{item}}" wx:key="index"></video-list>
+
+</view>

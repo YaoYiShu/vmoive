@@ -1,0 +1,7 @@
+<!--pages/cate/cate.wxml-->
+<view wx:if="{{id != 'Series'}}">
+  <video-list lists="{{lists}}" wx:for="{{lists}}"></video-list>
+</view>
+<view wx:else>
+  <series series="{{series}}"></series>
+</view>

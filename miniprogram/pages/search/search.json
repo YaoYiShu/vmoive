@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "search-history":"/components/search-history/search-history",
+    "search-result":"/components/search-result/search-result"
+  }
+}

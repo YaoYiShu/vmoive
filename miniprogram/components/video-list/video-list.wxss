@@ -1,0 +1,29 @@
+/* components/video-list/video-list.wxss */
+.item {
+  position: relative;
+}
+.item .text {
+  text-align: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  line-height: 1.5em;
+}
+
+.item .cate,.dur {
+  font-size: 12px;
+  transform: scale(0.6);
+  transform-origin: left;
+  padding: 0 0 0px 5px;
+  color: rgb(201, 200, 200);
+}
+
+.item .van-image {
+  display: block;
+}
+
+.item .item-title {
+  font-size: 14px;
+  padding: 0 0 0 5px;
+}

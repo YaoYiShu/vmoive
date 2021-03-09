@@ -1,0 +1,14 @@
+var parseDuration = function (d) {
+  var min = Math.floor(d / 60);
+  var sec = (d % 60);
+  if(min < 10) {
+    min = '0' + min;
+  }
+  if(sec < 10) {
+    sec = '0' + sec;
+  }
+  return min + "'" + sec + '"'
+}
+module.exports = {
+  parseDuration: parseDuration
+};

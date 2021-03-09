@@ -1,0 +1,47 @@
+/* components/find/find.wxss */
+
+.find {
+  background-color: #010101;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+.find swiper swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+/* .find .content .title {
+  transform: scale(0.75);
+}
+
+.find .content .list {
+  position: relative;
+}
+
+.find .content .list image{
+  width: 100%;
+  display: block;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+.find .content .list .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.find .content .list .desc .cate {
+  height: 1.2em;
+  transform: scale(0.6);
+  transform-origin: left;
+}
+.find .content .list .desc .wx-title {
+  font-size: 12px;
+  transform: scale(0.8);
+  transform-origin: left;
+} */
+

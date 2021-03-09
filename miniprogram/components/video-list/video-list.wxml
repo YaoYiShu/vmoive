@@ -1,0 +1,19 @@
+<!--components/video-list/video-list.wxml-->
+<wxs src="../../utils/tools.wxs" module="tools" />
+
+<view class="list-title">{{lists.selection_title}}</view>
+<view class="list">
+  <view class="item" wx:for="{{lists.list}}" wx:key="index" data-id="{{item.postid}}" bindtap="navigateToPlay">
+    <!-- <van-image width="750rpx" fit="widthFix" src="" /> -->
+    <image mark:xx="456" wx:if="{{item.image}}" style="width: 100%; display:block; filter: brightness(0.5)" mode="widthFix" src="{{item.image}}" />
+    <view class="text">
+      <view class="info">
+        <text class="cate" wx:for="{{item.cates}}" wx:for-item="cate" wx:for-index="idx"
+          wx:key="idx">{{cate.catename}} /</text>
+        <!-- <text class="dur">{{tools.parseDuration(item.duration)}}</text> -->
+        <text class="dur">{{tools.parseDuration(item.duration)}}</text>
+      </view>
+      <view class="item-title">{{item.title}}</view>
+    </view>
+  </view>
+</view>

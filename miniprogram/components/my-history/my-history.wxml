@@ -1,0 +1,7 @@
+<!--components/my-history/my-history.wxml-->
+<view class="my-history">
+  <view class="line">
+    <view class="clearAll" bindtap="handleClear">清空</view>
+  </view>
+  <my-video-list lists="{{lists}}"></my-video-list>
+</view>

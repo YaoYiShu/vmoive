@@ -1,0 +1,42 @@
+<!--pages/play/play.wxml-->
+<wxs src="../../utils/tools.wxs" module="tools" />
+
+<view class="play">
+  <!-- res.data.data.content_video[0].progressive[0].url -->
+  <video id="myVideo"  autoplay="{{true}}" src="{{videoInfo.content_video[0].progressive[0].url}}" binderror="videoErrorCallback"
+  show-center-play-btn='{{true}}' show-play-btn="{{true}}" controls></video>
+  
+  <loading wx:if="{{loading}}" style="height: 100%;font-size:18px"></loading>
+  <view class="desc" wx:if="{{!loading}}">
+    <view class="title">{{videoInfo.title}}</view>
+    <view class="cate">{{videoInfo.cate[0] || '00'}} / {{tools.parseDuration(videoInfo.duration) || "00'"+'00"'}}</view>
+    <view class="intro">{{videoInfo.intro}}</view>
+    <view class="read">阅读全文→</view>
+  </view>
+
+  <view wx:if="{{!loading}}">
+    <play-relate-video relateVideos="{{relateVideos}}" ></play-relate-video>
+    <play-comment comment="{{comment}}"></play-comment>
+  </view>
+
+  <!-- 是否喜欢 -->
+  <view class="publish">
+    <view class="write">
+      <image src="../../assect/detail_bottom_navigation_bar_edit.png"></image>
+    </view>
+    <view class="like" bindtap="setLike">
+      <image mode="widthFix" src="{{ !isLiked ? Icon : likeIcon}}"></image>
+      <view class="text">{{videoInfo.count_like || 0}}</view>
+    </view>
+    <view class="share">
+      <image src="../../assect/history_item_share.png"></image>
+      <view class="text">{{videoInfo.count_share || 0}}</view>
+    </view>
+    <view class="download">
+      <image mode="widthFix" src="../../assect/detail_bottom_navigation_bar_download.png"></image>
+      <view class="text">缓存</view>
+    </view>
+  </view>
+</view>
+
+

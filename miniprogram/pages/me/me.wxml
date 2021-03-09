@@ -1,0 +1,24 @@
+<!--pages/me/me.wxml-->
+
+<view class="me">
+  <view class="bg" style="background-image:url(../../assect/me_background.png)">
+    <!-- <image class="avator" src="../../assect/default_avatar.png"></image> -->
+    <view class="avator" bindtap="toLogin">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="username"><open-data type="userNickName"></open-data></view>
+  </view>
+  <view class="item" bindtap="toMyLike"><image class="icon" src="../../assect/my_stars_icon.png"></image> 我的喜欢</view>
+  <view class="item" bindtap="toCache"><image class="icon" src="../../assect/offline_icon.png"></image>离线缓存</view>
+  <view class="item" bindtap="toHistory"><image class="icon" src="../../assect/history_icon.png"></image>播放历史</view>
+  <view class="item" bindtap="handleMessage"><image class="icon" src="../../assect/messages_icon.png"></image>我的消息</view>
+
+  <view class="line"></view>
+
+  <view class="item" bindtap="handleSetting"><image class="icon" src="../../assect/setting_icon.png"></image>设置</view>
+  <view class="item" bindtap="handleFeedback"><image class="icon" src="../../assect/feedback_icon.png"></image>问题反馈</view>
+  
+  <view class="line-2"></view>
+</view>
+
+

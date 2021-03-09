@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-video-list": "../../components/my-video-list/my-video-list"
+  }
+}

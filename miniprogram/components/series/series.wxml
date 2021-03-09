@@ -1,0 +1,15 @@
+<!--components/series/series.wxml-->
+<view class="series">
+  <view class="serie" wx:for="{{series}}" wx:key="index">
+    <!-- style="height: {{Height}}" -->
+    <view class="imgBox" style="height:{{Height}}">
+      <image style="width:750rpx" mode="widthFix" src="{{item.app_image}}" bindload="imgHeight"></image>
+    </view>
+    <view class="desc">
+      <view class="title">{{item.title}}</view>
+      <view class="part">已更新至{{item.update_to}}集  {{item.follower_num}}人已订阅</view>
+      <view class="content">{{item.content}}</view>
+    </view>
+  </view>
+  <view class="end">-End-</view>
+</view>

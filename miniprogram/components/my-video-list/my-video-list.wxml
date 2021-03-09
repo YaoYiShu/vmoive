@@ -1,0 +1,15 @@
+<!--components/my-video-list/my-video-list.wxml-->
+<view class="video-list">
+  <view class="box" wx:for="{{lists}}" wx:key="index">
+  <view class="thumb">
+    <image mode="widthFix" src="{{item.image}}"></image>
+  </view>
+  <view class="content">
+    <view class="title">{{item.title}}</view>
+    <view class="count">
+      <view class="score"><text class="icon">⭐</text> {{item.rating}}分</view>
+      <view class="share"><image src="../../assect/history_item_share.png"></image><text>{{item.count_share}}</text></view>
+    </view>
+  </view>
+</view>
+</view>

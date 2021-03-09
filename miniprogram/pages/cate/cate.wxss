@@ -1,0 +1,7 @@
+/* pages/cate/cate.wxss */
+.cate {
+  background-color: #010101;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}

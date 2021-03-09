@@ -1,0 +1,10 @@
+/* components/my-cache.wxss */
+.cache {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 18px;
+}

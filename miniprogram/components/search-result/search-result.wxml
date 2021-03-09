@@ -1,0 +1,24 @@
+<!--components/search-result/search-result.wxml-->
+<view class="search-result">
+  <view class="menu">
+    <view class="top">
+      <van-dropdown-menu active-color="#fff">
+        <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+        <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="onNew" />
+        <van-dropdown-item id="item" title="{{ itemTitle }}">
+          <view class="keyword">
+            <!-- <text class="kw" wx:for="{{reverseHistory}}" data-kw="{{item.message}}" wx:key="index"
+            bindtap="handleSearch">{{item.message}}</text> -->
+            <!-- bindtap="{{current = index}}" -->
+            <text class="kw {{ current == index ? 'active': ''}}" wx:for="{{option3}}" data-kw="{{item.catename}}"
+              wx:key="index" data-current="{{index}}" data-cateid="{{item.cateid}}" bindtap="setActive">{{item.catename}}</text>
+          </view>
+        </van-dropdown-item>
+      </van-dropdown-menu>
+    </view>
+
+    <view class="total">{{searchResult.total}}个相关影片</view>
+    <video-list lists="{{searchResult}}"></video-list>
+
+  </view>
+</view>

@@ -1,0 +1,65 @@
+/* pages/me/me.wxss */
+
+.me {
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+}
+
+.me .bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  background-position: 50%;
+  background-size: cover;
+  flex-flow: column;
+}
+
+.me .bg .avator {
+  height:94px;
+  width:94px;
+  /* 同时加才能圆角 */
+  border-radius: 50%;
+  overflow:hidden
+}
+
+.me .line {
+  background: #121212;
+  height: 40px;
+  border-top: 1px solid rgba(211, 210, 210, 0.1);
+}
+
+.me .line-2 {
+  background: #121212;
+  height: 30px;
+}
+
+.me .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #1d1d1d;
+  padding: 5px 15px;
+  border-top: 1px solid rgba(211, 210, 210, 0.1);
+}
+
+.me .item::after {
+  position: absolute;
+  right: 10px;
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAnCAQAAAC/UkALAAACJElEQVQ4y42VTWgTQRTH/2+zhmAQXHrJMVgvWqoWuontoWAgYgvmkEMOUkEpeGk9SK9V0HtzaZWCYGmhlR78wI8eqoWIAclsNDTQmwdBiohWhBDabs0+D2l2x7o7yVxm/4/3m6/9vxkAgIhVjqPDppW6Suv8zf5RmtkMdwTQXaQA6Jiov9qIdgDgROuT03tvqkZbgFc8wQM7BRFrAyQXtLykz/D7Sly9JJiTdEeKnLSLH08FA9TsrHGeYXKD23wpWVYCgBjleehuvKZlzIISAKyMs4KIK3cpl3jpu4dWM19ow6i5MsJPxagSAMwCUrTtSh2L1rgSAJJlfQhb7n8hZ1ZMBe6h1Srx/bfcLY2ZNyeVACBiWONeKfAocYMaCgCoGjurOC+N+yR6pcdWAMBGdO8Zp6XAWiR7tq4AgM1w/TFnpVk+HBnp+60FAz22maN52cv7y8oZmgcrFnDV02FDUwNWP41I8te5mhIoX+B17nLln9AYNRSAlWms4phkxmz/c8UeDtudLife+XjJHX0Ci146/USqmR4AiClHqj9shYa8+iOfg5zGLSnwOZzu+wLJ8/+mh6yHuC6b6ujF3u+B9vY3Q2A9BNktAKgau695wM/QvoCqZHxquhJHUU7X8skx/3RAAz6dtotyDdNtuYb/W1K52yl5BiOmm+Z9lSF1557sR1wzl9SG12G0uxwPPygPiA+u3+H26QABYhA5rtNc4msnj+JfOojCW6s/O70AAAAASUVORK5CYII=) no-repeat;
+  background-position: 50%;
+  background-size: 50%;
+}
+
+.me .item .icon {
+  width: 25px;
+  height: 25px;
+  padding-right: 10px;
+}
+

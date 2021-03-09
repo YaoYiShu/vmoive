@@ -1,0 +1,25 @@
+/* pages/register/register.wxss */
+.register {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.register .van-cell-group{
+  display: flex;
+}
+
+.register .van-cell {
+  width: 600rpx;
+  border-bottom: 1px solid rgb(32,32,32,0.2);
+  height: 50px;
+}
+
+.register .van-button  {
+  width: 450rpx;
+  margin-top: 40px;
+  background-color:#32affe;
+}

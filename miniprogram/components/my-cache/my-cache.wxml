@@ -1,0 +1,4 @@
+<!--components/my-cache.wxml-->
+<view class="cache">
+  暂无缓存
+</view>

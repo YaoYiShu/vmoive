@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "find":"/components/find/find",
+    "channel":"/components/channel/channel",
+    "me":"/pages/me/me"
+  }
+}

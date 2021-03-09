@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text>
+ -->
+<view class="search">
+  <view class="search-box">
+    <view class="sm-box">
+      <van-icon name="search" />
+      <!-- bindinput="handleInput" -->
+      <!-- bug : 微信版本 6.3.30, focus 属性设置无效 -->
+      <input placeholder="请输入要搜索的内容" focus model:value="{{value}}" bindinput="handleInput"
+        bindconfirm="handleConfirm" />
+        <van-icon name="cross" wx:if="{{value.length}}" bindtap="clearValue"/>
+    </view>
+    <van-button type="default" bindtap="navigateBack">取消</van-button>
+  </view>
+
+  <view wx:if="{{flag}}">
+    <search-history bind:send="handleMessage" bind:searchEvent="handleSearch"  bind:clear="handleClear" search="{{search}}" reverseHistory="{{reverseHistory}}"></search-history>
+  </view>
+
+  <view wx:if="{{!flag}}">
+    <search-result searchResult="{{searchResult}}" bind:toggleCate="handleToggleCate" bind:orderByTime="handleOrderByTime" search="{{search}}"></search-result>
+  </view>
+
+  <!-- 加载 -->
+  <!-- <van-loading color="#1989fa" size="30" />  -->
+
+</view>

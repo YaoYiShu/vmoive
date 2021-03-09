@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "play-comment":"/components/play-comment/play-comment",
+    "play-relate-video":"/components/play-relate-video/play-relate-video",
+    "loading":"/components/loading/loading"
+  }
+}

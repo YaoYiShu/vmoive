@@ -1,0 +1,10 @@
+/* components/my-history/my-history.wxss */
+.my-history .line {
+  height: 30px;
+  background: #000;
+  color: #fff;
+}
+.my-history .line .clearAll {
+  float: right;
+  padding-right: 15px;
+} 

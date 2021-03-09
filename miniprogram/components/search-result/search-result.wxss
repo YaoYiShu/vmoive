@@ -1,0 +1,46 @@
+/* components/search-result/search-result.wxss */
+
+.search-result {
+  padding-top: 40px;
+}
+
+.search-result .menu {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.search-result .menu .top {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.search-result .total {
+  padding: 65px 15px 15px 15px;
+  color: #999;
+}
+
+.search-result .keyword {
+  padding: 0 15px;
+}
+
+.search-result .keyword .kw {
+  display: inline-block;
+  color: #ffffff;
+  padding: 8px 8px;
+  margin: 10px 15px 5px 0;
+  background-color: #252525;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+
+.search-result .keyword .kw:active {
+  background-color: #505053;
+  color: #666;
+}
+
+.search-result .keyword .kw.active {
+  border: 1px solid #fff;
+}

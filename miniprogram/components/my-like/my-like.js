@@ -1,0 +1,66 @@
+// components/my-like.js
+const db = wx.cloud.database();
+const users = db.collection('users');
+const Base64 = require('js-base64');
+
+Component({
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+    lists: []
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+
+  },
+  lifetimes: {
+    attached: function() {
+      // 在组件实例进入页面节点树时执行
+      this.ui = Base64.decode(wx.getStorageSync("userInfo"));
+      if(this.ui) {
+        // users.where({
+        //   phone: this.ui
+        // }).get().then(res=> {
+        //   console.log(res.data[0].like);
+        //   this.setData({
+        //     lists: res.data[0].like.slice().reverse()
+        //   })
+        // })
+        this.setData({
+          lists: wx.getStorageSync('likeVideos').slice().reverse()
+        })
+      }
+      // this.setData({
+      //   lists: wx.getStorageSync('histroyVideo').slice().reverse()
+      // })
+    },
+    detached: function() {
+      // 在组件实例被从页面节点树移除时执行
+      this.ui = Base64.decode(wx.getStorageSync("userInfo"));
+      if(this.ui) {
+        this.setData({
+          lists: wx.getStorageSync('likeVideos').slice().reverse()
+        })
+      }
+    },
+  },
+  // 以下是旧式的定义方式，可以保持对 <2.2.3 版本基础库的兼容
+  attached: function() {
+    // 在组件实例进入页面节点树时执行
+  },
+  detached: function() {
+    // 在组件实例被从页面节点树移除时执行
+  },
+
+})

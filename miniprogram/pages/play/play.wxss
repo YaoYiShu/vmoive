@@ -1,0 +1,77 @@
+/* pages/play/play.wxss */
+.play video {
+  width: 100%;
+}
+
+.play .desc .title{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0 15px 0;
+}
+
+.play .desc .cate {
+  font-size: 12px;
+  transform: scale(0.8);
+  text-align: center;
+  color: #666;
+}
+
+.play .desc .intro {
+  text-align: justify;
+  font-size: 12px;
+  padding: 0 10px;
+  word-spacing: 5px;
+  line-height: 18px;
+  color: #333;
+  padding: 20px;
+}
+
+.play .desc .read {
+  text-align: center;
+  transform: scale(0.7);
+  color: rgb(121, 206, 235);
+  padding-bottom: 30px;
+}
+
+.play .publish {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  z-index: 10;
+}
+
+.play .publish image {
+  width: 25px;
+  height: 25px;
+}
+
+.play .publish .text {
+  text-align: center;
+  font-size: 12px;
+}
+
+.play .publish .write {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  border: 2px solid rgba(32,32,32,0.1);
+}
+
+.play .publish .write>image {
+  padding-left: 18px;
+}
+
+.play .publish .like,.share,.download {
+  color: #929292;
+  font-weight: 420;
+}

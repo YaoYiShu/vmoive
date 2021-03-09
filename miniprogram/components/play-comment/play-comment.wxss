@@ -1,0 +1,74 @@
+/* components/play-comment/play-comment.wxss */
+
+.play-comment .total {
+  padding: 20px 0 10px 10px ;
+  font-size: 12px;
+  transform-origin: left;
+  font-weight: 600;
+  transform: scale(0.9);
+}
+
+.play-comment .lists{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.play-comment .lists image {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+.play-comment .lists .info {
+  flex: 1;
+}
+
+.play-comment .lists .info .top {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.play-comment .lists .info .top .user {
+  display: flex;
+  flex-flow: column;
+  transform: scale(0.75);
+  transform-origin: left;
+}
+
+.play-comment .lists .info .top .user .username,.time {
+  transform: scale(0.75);
+  transform-origin: left;
+}
+
+.play-comment .lists .info .top .approve {
+  position: absolute;
+  right: 10px;
+  width: 50px;
+  font-size: 12px;
+  transform-origin: right;
+  transform: scale(0.65);
+  text-align: center;
+}
+
+.play-comment .lists .info .bottom {
+  width: 100%;
+  font-size: 12px;
+  transform: scale(0.9);
+  transform-origin: left;
+}
+
+.play-comment .end {
+  width: 100%;
+  font-size: 12px;
+  transform: scale(0.8);
+  color: #666;
+  padding: 10px 0;
+  text-align: center;
+  /* border-bottom: 1px solid #eee; */
+  margin-bottom: 100px;
+}

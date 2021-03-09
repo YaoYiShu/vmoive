@@ -1,0 +1,45 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <van-nav-bar safe-area-inset-top="{{false}}">
+    <van-icon name="notes-o" slot="left" bindtap="toggleShow" />
+    <van-tabs animated swipeable slot="title"  title-active-color="#f0f0f0" line-height="1" active="{{ active }}"
+      bind:change="onChange">
+      <!-- active -->
+      <van-tab title="发现">
+        <view style="overflow:auto">
+          <find index="{{index}}" historyPosts="{{historyPosts}}"></find>
+        </view>
+      </van-tab>
+      <van-tab title="频道">
+        <channel lists="{{lists}}"></channel>
+      </van-tab>
+      <van-tab title="我的">
+        <me user_phone_id="{{user_phone_id}}"></me>
+      </van-tab>
+    </van-tabs>
+    <van-icon name="search" slot="right" bindtap="navigateToSearch" />
+  </van-nav-bar>
+
+  <!-- close-icon="close" -->
+  <van-popup show="{{show}}" closeable close-icon-position="top-left" position="top" bind:close="toggleShow"
+    custom-style="height:100%">
+    <view class="thumb">
+      <view class="mark" style="background-image: url({{dayCover.image}})"></view>
+      <view class="box">
+        <image style="background-color: #eeeeee;" mode="widthFix" src="{{dayCover.image}}">
+          <view class="time">
+            <text class="day">{{dayCover.time.day}}</text>
+            <view class="other">
+              <view>{{dayCover.time.month}}.</view>
+              <view>{{dayCover.time.week}}</view>
+            </view>
+          </view>
+        </image>
+        <view class="content">
+          <view class="title">{{dayCover.title}}</view>
+          <view class="desc">{{dayCover.content}}</view>
+        </view>
+      </view>
+    </view>
+  </van-popup>
+</view>
